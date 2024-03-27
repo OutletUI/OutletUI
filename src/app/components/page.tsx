@@ -3,7 +3,7 @@ import React from 'react';
 const ComponentsPage = () => {
     return (
         <div>
-            components
+            components page
         </div>
     );
 };
