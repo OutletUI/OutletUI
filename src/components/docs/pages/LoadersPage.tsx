@@ -36,12 +36,12 @@ export default function LoadersPage() {
         <PageTab id="preview">Preview</PageTab>
         <PageTab id="code-all">All Code</PageTab>
         <PageTab id="props">Variants</PageTab>
-      </PageTabs>
 
-      <TabPane id="preview">
-        <LoaderPreviews onCopy={showToast} />
-      </TabPane>
+        <TabPane id="preview">
+          <LoaderPreviews onCopy={showToast} />
+        </TabPane>
 
+        
       <TabPane id="code-all">
         <h3 className="font-syne font-bold text-[15px] mt-0 mb-2.5">1. Spinner</h3>
         <CodeBlock
@@ -278,6 +278,7 @@ export default function LoadersPage() {
           </span>
         </div>
       </TabPane>
+      </PageTabs>
 
       <DocNav
         prev={{ href: "/docs/how-to-use", title: "How to Use" }}
