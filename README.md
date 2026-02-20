@@ -3,20 +3,20 @@
 </div>
 
 <p align="center">
-   <a href="https://github.com/ronisarkarexe/First-Issue/blob/master/LICENSE" target="blank">
-   <img src="https://img.shields.io/github/license/ronisarkarexe/First-Issue?style=for-the-badge&logo=appveyor" alt="License" />
+   <a href="https://github.com/ronisarkarexe/OutletUI/blob/master/LICENSE" target="blank">
+   <img src="https://img.shields.io/github/license/ronisarkarexe/OutletUI?style=for-the-badge&logo=appveyor" alt="License" />
    </a>
-   <a href="https://github.com/ronisarkarexe/First-Issue/fork" target="blank">
-   <img src="https://img.shields.io/github/forks/ronisarkarexe/First-Issue?style=for-the-badge&logo=appveyor" alt="Forks"/>
+   <a href="https://github.com/ronisarkarexe/OutletUI/fork" target="blank">
+   <img src="https://img.shields.io/github/forks/ronisarkarexe/OutletUI?style=for-the-badge&logo=appveyor" alt="Forks"/>
    </a>
-   <a href="https://github.com/ronisarkarexe/First-Issue/stargazers" target="blank">
-   <img src="https://img.shields.io/github/stars/ronisarkarexe/First-Issue?style=for-the-badge&logo=appveyor" alt="Star"/>
+   <a href="https://github.com/ronisarkarexe/OutletUI/stargazers" target="blank">
+   <img src="https://img.shields.io/github/stars/ronisarkarexe/OutletUI?style=for-the-badge&logo=appveyor" alt="Star"/>
    </a>
-   <a href="https://github.com/ronisarkarexe/First-Issue/issues" target="blank">
-   <img src="https://img.shields.io/github/issues/ronisarkarexe/First-Issue.svg?style=for-the-badge&logo=appveyor" alt="Click Vote Issue"/>
+   <a href="https://github.com/ronisarkarexe/OutletUI/issues" target="blank">
+   <img src="https://img.shields.io/github/issues/ronisarkarexe/OutletUI.svg?style=for-the-badge&logo=appveyor" alt="Click Vote Issue"/>
    </a>
-   <a href="https://github.com/ronisarkarexe/First-Issue/pulls" target="blank">
-   <img src="https://img.shields.io/github/issues-pr/ronisarkarexe/First-Issue.svg?style=for-the-badge&logo=appveyor" alt="Click Vote Open Pull Request"/>
+   <a href="https://github.com/ronisarkarexe/OutletUI/pulls" target="blank">
+   <img src="https://img.shields.io/github/issues-pr/ronisarkarexe/OutletUI.svg?style=for-the-badge&logo=appveyor" alt="Click Vote Open Pull Request"/>
    </a>
 </p>
 
@@ -39,17 +39,17 @@
 
 ## About 🚀
 
-- First-Issue - [Website](https://firstissuedev.vercel.app/)
-- **`firstIssue`** firstIssue is an open-source project designed to showcase developer projects and connect contributors in a user-friendly.
-- With **`firstIssue`**, developers can create their profiles in JSON format, which are then displayed on the web for others to discover.
+- OutletUI - [Website](https://outletui.vercel.app/)
+- **OutletUI** is an open-source platform designed to showcase developer projects and connect contributors in a user-friendly way.
+- With **OutletUI**, developers can create their profiles in JSON format, which are then displayed on the web for others to discover.
 
 <a id="features"></a>
 
 ## Features 💪
 
-- One of the key features of **`firstIssue`** is its powerful search functionality.
+- One of the key features of **OutletUI** is its powerful search functionality.
 - Users can search for developers based on specific skills, making it easy to find issues with expertise in a particular technology or programming language.
-- This makes **`firstIssue`** a valuable resource for project managers, showcase and anyone looking to connect with skilled developers for collaboration or employment opportunities.
+- This makes **OutletUI** a valuable resource for project managers, showcase and anyone looking to connect with skilled developers for collaboration or employment opportunities.
 
 <a id="how-to-add-your-profile-data"></a>
 
