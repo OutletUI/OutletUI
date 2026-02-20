@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/shared/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/config/**/*.{js,ts}",
   ],
   theme: {
     extend: {
@@ -24,6 +25,7 @@ const config: Config = {
       fontFamily: {
         syne: ["var(--font-syne)", "sans-serif"],
         "dm-sans": ["var(--font-dm-sans)", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

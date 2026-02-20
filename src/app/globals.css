@@ -121,3 +121,353 @@ body.cursor-custom {
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+/* ─── Docs topbar logo blink ─── */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ─── Docs loaders (used on /docs/loaders) ─── */
+.docs-loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2.5px solid rgba(232, 255, 71, 0.15);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: docs-spin 0.75s linear infinite;
+}
+@keyframes docs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.docs-loader-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.docs-loader-dots span {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: docs-dots-bounce 1.2s ease-in-out infinite;
+}
+.docs-loader-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+  background: var(--accent2);
+}
+.docs-loader-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+  background: var(--accent3);
+}
+@keyframes docs-dots-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.docs-loader-bar-wrap {
+  width: 140px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.docs-loader-bar {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  animation: docs-bar-slide 1.6s ease-in-out infinite;
+}
+@keyframes docs-bar-slide {
+  0% {
+    width: 0%;
+    margin-left: 0%;
+  }
+  50% {
+    width: 60%;
+    margin-left: 20%;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+.docs-loader-ring {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+.docs-loader-ring::before,
+.docs-loader-ring::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 2.5px solid transparent;
+}
+.docs-loader-ring::before {
+  inset: 0;
+  border-top-color: var(--accent);
+  animation: docs-spin 0.9s linear infinite;
+}
+.docs-loader-ring::after {
+  inset: 7px;
+  border-bottom-color: var(--accent2);
+  animation: docs-spin 0.6s linear infinite reverse;
+}
+
+.docs-loader-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 180px;
+}
+.docs-skel {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 80%
+  );
+  background-size: 400% 100%;
+  animation: docs-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes docs-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.docs-loader-blob {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.docs-blob-inner {
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: docs-blob-pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(232, 255, 71, 0.4);
+}
+@keyframes docs-blob-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(232, 255, 71, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 16px rgba(232, 255, 71, 0);
+  }
+}
+
+.docs-loader-orbit {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.docs-orbit-core {
+  width: 14px;
+  height: 14px;
+  background: var(--accent2);
+  border-radius: 50%;
+}
+.docs-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255, 255, 255, 0.1);
+  animation: docs-spin 2s linear infinite;
+}
+.docs-orbit-ring::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: var(--accent3);
+  border-radius: 50%;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.docs-loader-type {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 14px;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+}
+.docs-type-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: docs-typing 2.5s steps(14) infinite alternate;
+  border-right: 2px solid var(--accent);
+  padding-right: 2px;
+}
+@keyframes docs-typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14ch;
+  }
+}
+
+.docs-loader-squares {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.docs-sq {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: var(--accent);
+  animation: docs-sq-flash 1.2s ease-in-out infinite;
+}
+.docs-sq:nth-child(2) {
+  animation-delay: 0.3s;
+  background: var(--accent2);
+}
+.docs-sq:nth-child(3) {
+  animation-delay: 0.15s;
+  background: var(--accent3);
+}
+.docs-sq:nth-child(4) {
+  animation-delay: 0.45s;
+  background: #a78bfa;
+}
+@keyframes docs-sq-flash {
+  0%,
+  80%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.docs-loader-progress {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.docs-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 100px;
+  animation: docs-progress-auto 2.5s ease-in-out infinite;
+}
+@keyframes docs-progress-auto {
+  0% {
+    width: 0%;
+  }
+  60% {
+    width: 80%;
+  }
+  85% {
+    width: 82%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.docs-heart-path {
+  stroke: var(--accent);
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: docs-draw-line 1.8s ease-in-out infinite;
+}
+@keyframes docs-draw-line {
+  0% {
+    stroke-dashoffset: 300;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -300;
+    opacity: 0;
+  }
+}
+
+.docs-loader-ripple {
+  width: 52px;
+  height: 52px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.docs-ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  animation: docs-ripple-out 2s ease-out infinite;
+}
+.docs-ripple-circle:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.docs-ripple-circle:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.docs-ripple-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  z-index: 1;
+}
+@keyframes docs-ripple-out {
+  0% {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  100% {
+    width: 52px;
+    height: 52px;
+    opacity: 0;
+  }
+}

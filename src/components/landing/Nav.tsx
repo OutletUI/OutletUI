@@ -24,7 +24,7 @@ export default function Nav() {
           Themes
         </Link>
         <Link
-          href="#"
+          href="/docs"
           className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text)] transition-colors relative after:content-[''] after:absolute after:bottom-[-3px] after:left-0 after:right-0 after:h-px after:bg-[var(--accent)] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
         >
           Docs
@@ -37,7 +37,7 @@ export default function Nav() {
         </Link>
       </div>
       <Link
-        href="#"
+        href="/docs"
         className="font-syne font-bold text-[13px] py-2.5 px-5 rounded-md bg-[var(--accent)] text-[#09090b] no-underline tracking-wide border-0 transition-[transform,box-shadow] hover:translate-y-[-1px] hover:shadow-[0_8px_30px_rgba(232,255,71,0.3)]"
       >
         Get Started →
