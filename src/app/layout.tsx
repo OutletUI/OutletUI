@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
-      <body className={dmSans.className}>
+      <body className={dmSans.className} suppressHydrationWarning>
         {children}
       </body>
     </html>

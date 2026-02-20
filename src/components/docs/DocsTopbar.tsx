@@ -47,7 +47,7 @@ export default function DocsTopbar({ onMenuClick }: DocsTopbarProps) {
                   : false;
             return (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 className={`text-[13px] py-1.5 px-3 rounded-md transition-all duration-200 no-underline ${
                   active

@@ -1,6 +1,14 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+  isValidElement,
+  Children,
+} from "react";
 
 type TabId = string;
 
@@ -17,10 +25,20 @@ export function PageTabs({
   children: ReactNode;
 }) {
   const [active, setActive] = useState<TabId>(defaultTab);
+  const childArray = Children.toArray(children);
+  const tabButtons = childArray.filter(
+    (c) => isValidElement(c) && c.type === PageTab
+  );
+  const tabPanes = childArray.filter(
+    (c) => isValidElement(c) && c.type === TabPane
+  );
   return (
     <TabsContext.Provider value={{ active, setActive }}>
-      <div className="flex gap-1 mb-9 border-b border-[var(--border)] pb-0 mt-8">
-        {children}
+      <div className="mt-8">
+        <div className="flex gap-1 mb-9 border-b border-[var(--border)] pb-0">
+          {tabButtons}
+        </div>
+        <div className="min-h-[200px]">{tabPanes}</div>
       </div>
     </TabsContext.Provider>
   );

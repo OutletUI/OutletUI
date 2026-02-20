@@ -43,7 +43,7 @@ export default function LoadersPage() {
       </TabPane>
 
       <TabPane id="code-all">
-        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">1. Spinner</h3>
+        <h3 className="font-syne font-bold text-[15px] mt-0 mb-2.5">1. Spinner</h3>
         <CodeBlock
           lang="HTML"
           code={`<div class="w-10 h-10 rounded-full border-[2.5px]
@@ -72,6 +72,14 @@ export default function LoadersPage() {
   100% { width: 0%; margin-left: 100%; }
 }`}
         />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">4. Double Ring</h3>
+        <CodeBlock
+          lang="HTML"
+          code={`<div class="relative w-11 h-11">
+  <div class="absolute inset-0 rounded-full border-[2.5px] border-transparent border-t-yellow-400 animate-[spin_.9s_linear_infinite]"></div>
+  <div class="absolute inset-[7px] rounded-full border-[2.5px] border-transparent border-b-emerald-400 animate-[spin_.6s_linear_infinite_reverse]"></div>
+</div>`}
+        />
         <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">5. Skeleton</h3>
         <CodeBlock
           lang="HTML + CSS"
@@ -90,6 +98,84 @@ export default function LoadersPage() {
 @keyframes shimmer {
   0% { background-position: 100% 0; }
   100% { background-position: -100% 0; }
+}`}
+        />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">6. Pulse Blob</h3>
+        <CodeBlock
+          lang="HTML"
+          code={`<div class="w-12 h-12 flex items-center justify-center">
+  <div class="w-6 h-6 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
+</div>`}
+        />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">7. Orbit</h3>
+        <CodeBlock
+          lang="HTML"
+          code={`<div class="relative w-12 h-12 flex items-center justify-center">
+  <div class="w-3.5 h-3.5 bg-emerald-400 rounded-full z-10"></div>
+  <div class="absolute inset-0 rounded-full border border-dashed border-white/10 animate-[spin_2s_linear_infinite]"></div>
+</div>`}
+        />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">8. Typewriter</h3>
+        <CodeBlock
+          lang="HTML + CSS"
+          code={`<span class="font-mono text-yellow-400 border-r-2 border-yellow-400 pr-1 overflow-hidden whitespace-nowrap animate-[typing_2.5s_steps(14)_infinite_alternate]">Loading...</span>
+
+/* Add to CSS if needed */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}`}
+        />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">9. Squares</h3>
+        <CodeBlock
+          lang="HTML + CSS"
+          code={`<div class="grid grid-cols-2 gap-1">
+  <div class="w-3.5 h-3.5 rounded bg-yellow-400 animate-[sq_.9s_ease-in-out_infinite]"></div>
+  <div class="w-3.5 h-3.5 rounded bg-emerald-400 animate-[sq_.9s_ease-in-out_infinite]" style="animation-delay:.3s"></div>
+  <div class="w-3.5 h-3.5 rounded bg-orange-400 animate-[sq_.9s_ease-in-out_infinite]" style="animation-delay:.15s"></div>
+  <div class="w-3.5 h-3.5 rounded bg-violet-400 animate-[sq_.9s_ease-in-out_infinite]" style="animation-delay:.45s"></div>
+</div>
+
+/* Add to CSS */
+@keyframes sq {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.1); }
+}`}
+        />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">10. Progress Bar</h3>
+        <CodeBlock
+          lang="HTML + CSS"
+          code={`<div class="w-36 flex flex-col gap-2">
+  <div class="flex justify-between text-xs text-zinc-500"><span>Loading</span><span>...</span></div>
+  <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+    <div class="h-full bg-yellow-400 rounded-full animate-[progress_2.5s_ease-in-out_infinite]"></div>
+  </div>
+</div>
+
+/* Add to CSS */
+@keyframes progress {
+  0% { width: 0%; }
+  60% { width: 80%; }
+  85% { width: 82%; }
+  100% { width: 100%; }
+}`}
+        />
+        <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">11. Heartbeat</h3>
+        <CodeBlock
+          lang="HTML + CSS"
+          code={`<svg viewBox="0 0 120 40" class="w-32 h-10">
+  <path d="M0,20 L20,20 L30,5 L40,35 L50,12 L60,28 L70,20 L120,20"
+    stroke="#e8ff47" stroke-width="2" fill="none"
+    stroke-dasharray="300" stroke-dashoffset="300"
+    style="animation: draw 1.8s ease-in-out infinite"/>
+</svg>
+
+/* Add to CSS */
+@keyframes draw {
+  0% { stroke-dashoffset: 300; opacity: 0; }
+  30% { opacity: 1; }
+  70% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -300; opacity: 0; }
 }`}
         />
         <h3 className="font-syne font-bold text-[15px] mt-7 mb-2.5">12. Ripple</h3>

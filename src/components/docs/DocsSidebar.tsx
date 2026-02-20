@@ -23,7 +23,7 @@ export default function DocsSidebar({ open = false, onClose }: DocsSidebarProps)
             <span className="flex-1 h-px bg-[var(--border)]" />
           </div>
           {section.links
-            .filter((l) => !l.sub)
+            .filter((l) => !("sub" in l && l.sub))
             .map((link) => (
               <Link
                 key={link.href}
@@ -41,10 +41,10 @@ export default function DocsSidebar({ open = false, onClose }: DocsSidebarProps)
                   </span>
                   {link.label}
                 </span>
-                {link.badge && (
+                {"badge" in link && link.badge && (
                   <span
                     className={`text-[10px] font-semibold py-0.5 px-[7px] rounded-full tracking-wide ${
-                      link.badgeType === "new"
+                      "badgeType" in link && link.badgeType === "new"
                         ? "bg-[rgba(232,255,71,0.15)] text-[var(--accent)]"
                         : "bg-[rgba(71,255,178,0.12)] text-[var(--accent2)]"
                     }`}
@@ -54,10 +54,10 @@ export default function DocsSidebar({ open = false, onClose }: DocsSidebarProps)
                 )}
               </Link>
             ))}
-          {section.links.some((l) => l.sub) && (
+          {section.links.some((l) => "sub" in l && l.sub) && (
             <div className="pl-4">
               {section.links
-                .filter((l) => l.sub)
+                .filter((l) => "sub" in l && l.sub)
                 .map((link) => (
                   <Link
                     key={link.href}
