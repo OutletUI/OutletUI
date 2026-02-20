@@ -9,6 +9,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        outlet: {
+          bg: "var(--bg)",
+          surface: "var(--surface)",
+          surface2: "var(--surface2)",
+          text: "var(--text)",
+          muted: "var(--muted)",
+          accent: "var(--accent)",
+          accent2: "var(--accent2)",
+          accent3: "var(--accent3)",
+        },
+      },
+      fontFamily: {
+        syne: ["var(--font-syne)", "sans-serif"],
+        "dm-sans": ["var(--font-dm-sans)", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
