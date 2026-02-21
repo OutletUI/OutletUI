@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Syne, DM_Sans, JetBrains_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const syne = Syne({
@@ -20,6 +20,14 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["700", "900"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: "OutletUI — Plug in. Ship faster.",
   description:
@@ -32,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable} ${playfair.variable}`}>
       <body className={dmSans.className} suppressHydrationWarning>
         {children}
       </body>
