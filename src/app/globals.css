@@ -471,3 +471,20 @@ body.cursor-custom {
     opacity: 0;
   }
 }
+
+/* ─── Docs navbars (used on /docs/navbars) ─── */
+.docs-nav-grad-wrap {
+  padding: 1.5px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #e8ff47, #47ffb2, #ff6b47, #e8ff47);
+  background-size: 300% 100%;
+  animation: docs-grad-shift 4s linear infinite;
+}
+@keyframes docs-grad-shift {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
