@@ -14,8 +14,8 @@ export const SIDEBAR_SECTIONS = [
       { href: "/docs/loaders", label: "Loaders", icon: "⏳", badge: "12" as const, badgeType: "new" },
       { href: "/docs/navbars", label: "Navbars", icon: "🧭", badge: "10", badgeType: "new" },
       { href: "/docs/heroes", label: "Hero Sections", icon: "🦸", badge: "9", badgeType: "new" },
-      { href: "/docs/cards", label: "Cards", icon: "🃏" },
-      { href: "/docs/modals", label: "Modals", icon: "🪟", badge: "soon" as const, badgeType: "beta" },
+      { href: "/docs/cards", label: "Cards", icon: "🃏", badge: "12", badgeType: "new" },
+      { href: "/docs/modals", label: "Modals", icon: "🧩", badge: "soon" as const, badgeType: "beta" },
       { href: "/docs/forms", label: "Forms", icon: "📝" },
       { href: "/docs/tables", label: "Data Tables", icon: "📊" },
       { href: "/docs/sidebars", label: "Sidebars", icon: "📌" },
@@ -59,6 +59,7 @@ export const DOCS_TOC: Record<string, { label: string; id: string }[]> = {
   loaders: [],
   navbars: [],
   heroes: [],
+  cards: [],
 };
 
 export const PLACEHOLDER_TITLES: Record<string, string> = {
