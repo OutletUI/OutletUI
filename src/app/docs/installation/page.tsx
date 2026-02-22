@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import DocsToc from "@/components/docs/DocsToc";
 import InstallationPage from "@/components/docs/pages/InstallationPage";
+import { buildDocMeta } from "@/lib/seo";
+
+export const metadata: Metadata = buildDocMeta(
+  "Installation / Setup",
+  "Install OutletUI via CDN, Tailwind CLI, or your framework. Quick setup for copy-paste Tailwind UI components.",
+  "/docs/installation",
+  ["installation", "setup", "CDN", "Tailwind CLI", "OutletUI install", "AI search"]
+);
 
 export default function InstallationDocsPage() {
   return (

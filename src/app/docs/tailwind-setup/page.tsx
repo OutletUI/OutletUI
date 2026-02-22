@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import DocsToc from "@/components/docs/DocsToc";
 import PlaceholderPage from "@/components/docs/pages/PlaceholderPage";
+import { buildDocMeta } from "@/lib/seo";
+
+export const metadata: Metadata = buildDocMeta(
+  "Tailwind CSS Setup",
+  "Configure Tailwind CSS for OutletUI. Copy-paste UI components with Tailwind.",
+  "/docs/tailwind-setup"
+);
 
 export default function TailwindSetupDocsPage() {
   return (

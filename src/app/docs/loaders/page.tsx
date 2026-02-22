@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import DocsToc from "@/components/docs/DocsToc";
 import LoadersPage from "@/components/docs/pages/LoadersPage";
+import { buildDocMeta } from "@/lib/seo";
+
+export const metadata: Metadata = buildDocMeta(
+  "Loaders",
+  "Copy-paste loader and spinner components for Tailwind CSS. 12 loaders in OutletUI.",
+  "/docs/loaders",
+  ["loaders", "spinner", "loading animation", "Tailwind loader", "copy paste loader", "AI search", "UI loaders"]
+);
 
 export default function LoadersDocsPage() {
   return (

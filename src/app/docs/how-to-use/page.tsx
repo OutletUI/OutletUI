@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import DocsToc from "@/components/docs/DocsToc";
 import HowToUsePage from "@/components/docs/pages/HowToUsePage";
+import { buildDocMeta } from "@/lib/seo";
+
+export const metadata: Metadata = buildDocMeta(
+  "How to Use",
+  "Browse, copy, and paste OutletUI components. No installs. No config. Just copy and ship.",
+  "/docs/how-to-use"
+);
 
 export default function HowToUseDocsPage() {
   return (

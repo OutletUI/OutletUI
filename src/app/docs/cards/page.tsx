@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import DocsToc from "@/components/docs/DocsToc";
 import CardsPage from "@/components/docs/pages/CardsPage";
+import { buildDocMeta } from "@/lib/seo";
+
+export const metadata: Metadata = buildDocMeta(
+  "Cards",
+  "Copy-paste card components for Tailwind CSS. 12 card designs in OutletUI.",
+  "/docs/cards",
+  ["card component", "Tailwind card", "copy paste card", "AI search", "React card", "UI card design"]
+);
 
 export default function CardsDocsPage() {
   return (

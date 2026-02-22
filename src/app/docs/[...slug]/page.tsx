@@ -1,9 +1,25 @@
+import type { Metadata } from "next";
 import DocsToc from "@/components/docs/DocsToc";
 import PlaceholderPage from "@/components/docs/pages/PlaceholderPage";
 import { PLACEHOLDER_TITLES } from "@/config/docs";
+import { buildDocMeta } from "@/lib/seo";
 
 function getTitle(slug: string): string {
   return PLACEHOLDER_TITLES[slug] ?? slug.replace(/-/g, " ");
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string[] };
+}): Promise<Metadata> {
+  const segment = params.slug?.[0] ?? "Docs";
+  const title = getTitle(segment);
+  return buildDocMeta(
+    title,
+    `Documentation for ${title} in OutletUI. Copy-paste UI components with Tailwind CSS.`,
+    `/docs/${segment}`
+  );
 }
 
 export default function DocsPlaceholderPage({
